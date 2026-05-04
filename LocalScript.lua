@@ -6,17 +6,24 @@ local player = game.Players.LocalPlayer
 local admin = require(game.ReplicatedStorage.AdminUsers)
 local Admin = false
 
-
-local function ISadmin()
-	if player.UserId == game.CreatorId then
+local function IsAdmin()
+	if player.UserId == admin.User then
 		Admin = true
-		print("Owner Online")
+	else
+		print("Failed To GetUSERADMIN")
 	end
-		
-		
 end
 
-ISadmin()
+local function NAMECheck()
+	if player.Name == admin.Username then
+		Admin = true
+	else
+		print("Failed To GetNameADMIN")
+	end
+end
+
+NAMECheck()
+IsAdmin()
 
 uis.InputBegan:Connect(function(input)
 	if input.KeyCode == Enum.KeyCode.KeypadFive then
