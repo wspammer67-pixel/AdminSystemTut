@@ -1,0 +1,4 @@
+Setup:
+  In ReplicatedStorage Make A module Named "AdminUsers"
+  In StarterGUI make a screenGUI named "AdminScreenGUI", inside the ScreenGUI Add a localScript and A frame, Named the frame "AdminFrame" 
+  Then inside the module goto AdminUsers.lua or Module.lua, inside the localscript import LocalScript.lua
